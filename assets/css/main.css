@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1656,3 +1659,46 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+		/* Modern Gothic Design Tokens */
+:root {
+    --bg-deep: #0D0D0D;
+    --bg-surface: #1A1A1A;
+    --text-primary: #E0E0E0;
+    --text-secondary: #B0B0B0;
+    --accent-purple: #B915CC;
+    --accent-red: #FF004D;
+    --accent-cyan: #00CAFF;
+    --border-soft: #2C2C2C;
+    --glow-purple: 0 0 15px rgba(185, 21, 204, 0.4);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.button.primary {
+    background: var(--accent-red);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(255, 0, 77, 0.3);
+    transition: var(--transition);
+}
+
+.button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 0, 77, 0.5);
+    background: #ff1a66;
+}
+
+/* Glassmorphism for Modal Articles */
+article {
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 2rem;
+}
